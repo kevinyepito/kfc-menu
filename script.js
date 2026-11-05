@@ -1,3 +1,7 @@
+const theme = localStorage.getItem('theme') || '1' 
+change_theme(theme)
+
+
 function change_theme(value) {
     const cards = document.querySelectorAll('.card')
     const background = document.querySelector('main')
@@ -12,6 +16,7 @@ function change_theme(value) {
             button.classList.replace('btn-light', 'btn-danger')
             footer.classList.replace('bg-secondary', 'bg-danger')
         });
+        localStorage.setItem('theme','1')
 
     }
 
@@ -45,6 +50,7 @@ function change_theme(value) {
             button.classList.replace('btn-danger', 'btn-light')
 
         });
+        localStorage.setItem('theme','2')
 
     }
 }
